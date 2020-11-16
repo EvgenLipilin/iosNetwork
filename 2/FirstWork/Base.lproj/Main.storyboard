@@ -160,9 +160,6 @@
                                     <segment title="ascended"/>
                                     <segment title="descended"/>
                                 </segments>
-                                <connections>
-                                    <action selector="ToSwitch:" destination="FL8-Y9-GeD" eventType="valueChanged" id="zJs-xH-T9y"/>
-                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8z-Ow-ZgO">
                                 <rect key="frame" x="135.5" y="479" width="143" height="42"/>
@@ -208,6 +205,7 @@
                         <outlet property="nameTextField" destination="OFC-Gm-oFC" id="iCF-bH-4Z4"/>
                         <outlet property="startButton" destination="p8z-Ow-ZgO" id="LB4-qr-1Cm"/>
                         <outlet property="uiImage" destination="dqx-0O-R2n" id="CgY-kM-vLO"/>
+                        <outlet property="uiSegment" destination="eOV-oc-EjH" id="GOX-7D-Ffe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INc-ck-MyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
