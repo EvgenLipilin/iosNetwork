@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="138" id="EP9-pV-2ME" customClass="Cell" customModule="FirstWork" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="138"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EP9-pV-2ME" id="D4a-ql-wU3">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Репозит..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-X7-kov">
+                        <rect key="frame" x="5" y="10" width="222" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="1TT-Mg-fKS"/>
+                            <constraint firstAttribute="width" constant="222" id="e6T-Id-gFx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание..." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-FJ-bR2">
+                        <rect key="frame" x="5" y="36" width="222" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19.5" id="2FO-XM-2d9"/>
+                            <constraint firstAttribute="width" constant="222" id="mr7-sV-JGs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя автора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTh-0j-usB">
+                        <rect key="frame" x="321" y="10" width="92" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="92" id="KC3-cE-HFJ"/>
+                            <constraint firstAttribute="height" constant="21" id="OjK-Jq-f8p"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yYS-Qb-FIc">
+                        <rect key="frame" x="333" y="36" width="80" height="80"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="ICl-c9-rmA"/>
+                            <constraint firstAttribute="width" constant="80" id="weS-63-ofU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ziV-X7-kov" firstAttribute="top" secondItem="D4a-ql-wU3" secondAttribute="top" constant="10" id="30g-C1-hHF"/>
+                    <constraint firstItem="eX6-FJ-bR2" firstAttribute="top" secondItem="ziV-X7-kov" secondAttribute="bottom" constant="5" id="HgV-n9-yTL"/>
+                    <constraint firstItem="yYS-Qb-FIc" firstAttribute="top" secondItem="WTh-0j-usB" secondAttribute="bottom" constant="5" id="IRu-Jb-uNS"/>
+                    <constraint firstAttribute="trailing" secondItem="WTh-0j-usB" secondAttribute="trailing" constant="5" id="JLE-Oz-cBU"/>
+                    <constraint firstAttribute="trailing" secondItem="yYS-Qb-FIc" secondAttribute="trailing" constant="5" id="bGW-N8-hPf"/>
+                    <constraint firstItem="eX6-FJ-bR2" firstAttribute="leading" secondItem="D4a-ql-wU3" secondAttribute="leading" constant="5" id="eL6-8P-a7V"/>
+                    <constraint firstAttribute="bottom" secondItem="yYS-Qb-FIc" secondAttribute="bottom" constant="5" id="fm7-1K-bMb"/>
+                    <constraint firstItem="WTh-0j-usB" firstAttribute="centerY" secondItem="ziV-X7-kov" secondAttribute="centerY" id="frY-3f-2Dl"/>
+                    <constraint firstItem="ziV-X7-kov" firstAttribute="leading" secondItem="D4a-ql-wU3" secondAttribute="leading" constant="5" id="rJu-60-rN6"/>
+                    <constraint firstItem="WTh-0j-usB" firstAttribute="top" secondItem="D4a-ql-wU3" secondAttribute="top" constant="10" id="sZf-Bo-BLz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorName" destination="WTh-0j-usB" id="2gj-gi-rAy"/>
+                <outlet property="avatarAuthor" destination="yYS-Qb-FIc" id="hlD-9b-4ye"/>
+                <outlet property="descriptionLabel" destination="eX6-FJ-bR2" id="L7s-Ie-QeX"/>
+                <outlet property="repoName" destination="ziV-X7-kov" id="4Vi-bc-Kfw"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="-33.482142857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
