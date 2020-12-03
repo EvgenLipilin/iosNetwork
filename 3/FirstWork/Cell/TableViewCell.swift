@@ -24,7 +24,7 @@ class Cell: UITableViewCell {
         
         repoName?.text = item.name
         descriptionLabel?.text = item.description ?? "No description"
-        authorName?.text = item.name
+        authorName?.text = item.owner.login
         
         let url = URL(string: item.owner.imageURL)
         avatarAuthor?.kf.setImage(with: url)
