@@ -21,6 +21,7 @@ class SecondView: UIViewController {
     var response = "https://api.github.com/search/repositories?q="
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         uiImage.layer.cornerRadius = 60
         uiImage.clipsToBounds = true
@@ -47,6 +48,7 @@ class SecondView: UIViewController {
                 
                 DispatchQueue.main.async {
                     let newView = self?.storyboard?.instantiateViewController(withIdentifier: "ViewThree") as! SearchView
+                    newView.json = json
                     self?.navigationController?.pushViewController(newView, animated: true)
                 }
                 

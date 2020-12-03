@@ -5,7 +5,6 @@ class NetworkManager {
     
     static func searchRepositoryWithoutSort(urlResponse: String, repoName: String, language: String, completion: @escaping (_ model: Repository) -> ()) {
         let urlForSearch = urlResponse + repoName + "+language:" + language
-        print(urlForSearch)
         guard let url = URL(string: urlForSearch) else { return }
         let session = URLSession.shared
         
@@ -22,9 +21,8 @@ class NetworkManager {
             
             do {
                 let json = try JSONDecoder().decode(Repository.self, from: data)
-                print(json)
-      completion(json)
-               
+                completion(json)
+                
             } catch DecodingError.keyNotFound(let key, let context) {
                 Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
             } catch DecodingError.valueNotFound(let type, let context) {
@@ -51,15 +49,15 @@ class NetworkManager {
                 print(error!.localizedDescription)
                 return
             }
-
+            
             guard let data = data else {
                 print(error!.localizedDescription)
                 return }
-          
+            
             do {
                 let json = try JSONDecoder().decode(Repository.self, from: data)
                 completion(json)
-
+                
             } catch {
                 print(error.localizedDescription)
             }

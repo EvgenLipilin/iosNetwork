@@ -8,17 +8,17 @@
 import Foundation
 
 struct Repository: Codable {
-
-     var total_count: Int
-     var items: [Items]
+    
+    var total_count: Int
+    var items: [Items]
 }
 
 struct Items: Codable {
-     var name: String
-     var fullName: String
-     var description: String?
-     var owner: Owner
-
+    var name: String
+    var fullName: String
+    var description: String?
+    var owner: Owner
+    
     private enum CodingKeys: String, CodingKey {
         case fullName = "full_name"
         case description
@@ -28,8 +28,8 @@ struct Items: Codable {
 }
 
 struct Owner: Codable {
-     var imageURL: String
-
+    var imageURL: String
+    
     private enum CodingKeys: String, CodingKey {
         case imageURL = "avatar_url"
     }

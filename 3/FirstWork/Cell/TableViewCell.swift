@@ -16,19 +16,18 @@ class Cell: UITableViewCell {
     @IBOutlet weak var authorName: UILabel?
     @IBOutlet weak var avatarAuthor: UIImageView?
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
-
+    
     func configureCell(_ item: Items) {
+        
         repoName?.text = item.name
-        descriptionLabel?.text = item.description
+        descriptionLabel?.text = item.description ?? "No description"
         authorName?.text = item.name
         
         let url = URL(string: item.owner.imageURL)
         avatarAuthor?.kf.setImage(with: url)
+        
     }
-    }
+}

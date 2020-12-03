@@ -14,8 +14,6 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var json: Repository?
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,28 +24,22 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource {
         let nibName = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
         
-        countRepo.text = "Repositories: \(json?.total_count ?? 0)"
-      
-}
+        countRepo.text = "Repositories found: \(json?.total_count ?? 0)"
+    }
     
-    
-    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let json = self.json else { return 0 }
         return json.items.count
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! Cell
         guard let json = self.json else { return UITableViewCell() }
         let item = json.items[indexPath.row]
-      
-       cell.configureCell(item)
+        cell.configureCell(item)
         
         return cell
-        
     }
-    
-    
 }

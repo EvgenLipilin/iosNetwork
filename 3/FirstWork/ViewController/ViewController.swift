@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class ViewController: UIViewController{
-
+    
     @IBOutlet weak var imageLogo: UIImageView!
     
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class ViewController: UIViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SecondView") as UIViewController
         navigationController?.pushViewController(vc, animated: true)
-              }
-          }
+    }
+}
 
 
