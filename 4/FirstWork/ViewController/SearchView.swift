@@ -47,6 +47,7 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let url = json?.items[indexPath.row].owner.html_url
         
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "WebView") as! Web
