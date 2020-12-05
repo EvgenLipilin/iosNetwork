@@ -13,7 +13,9 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var countRepo: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    
     var json: Repository?
+    var repoURL: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource {
         countRepo.text = "Repositories found: \(json?.total_count ?? 0)"
     }
     
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let json = self.json else { return 0 }
         return json.items.count
@@ -42,7 +44,14 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         return cell
     }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("ttt")
+        let url = json?.items[indexPath.row].owner.html_url
+        
+        let newView = self.storyboard?.instantiateViewController(withIdentifier: "WebView") as! Web
+        newView.stringURL = url
+        self.navigationController?.pushViewController(newView, animated: true)
     }
 }
+

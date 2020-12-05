@@ -23,11 +23,13 @@ struct Items: Codable {
 struct Owner: Codable {
     var imageURL: String
     var login: String
+    var html_url: String
     
     
     private enum CodingKeys: String, CodingKey {
         case imageURL = "avatar_url"
         case login
+        case html_url
     }
 }
 
