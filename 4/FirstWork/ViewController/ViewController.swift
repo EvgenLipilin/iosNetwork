@@ -10,6 +10,8 @@ import Kingfisher
 
 class ViewController: UIViewController{
     
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var password: UITextField!
     @IBOutlet weak var imageLogo: UIImageView!
     
     override func viewDidLoad() {
@@ -19,10 +21,26 @@ class ViewController: UIViewController{
     }
     
     @IBAction func transitionView(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SecondView") as UIViewController
-        navigationController?.pushViewController(vc, animated: true)
-    }
+        
+        let username = userName.text ?? ""
+        let myPassword = password.text ?? ""
+        
+
+        NetworkManager.login(username: username, password: myPassword) { (statusCode, jsonData)  in
+            
+            guard statusCode == 200 else {
+                print("Error authorization")
+                return
+            }
+            print(jsonData)
+            
+            if let user = User.logFromJson(jsonData){
+            DispatchQueue.main.async {
+                    let newView = self.storyboard?.instantiateViewController(withIdentifier: "SecondView") as! SecondView
+                    newView.user = user
+                    self.navigationController?.pushViewController(newView, animated: true)
+            }
+                }
+            }
+        }
 }
-
-

@@ -9,16 +9,19 @@ import Foundation
 
 struct User: Decodable {
     
-    var login: String
-    var imageURL: String
+    let login: String
+    let avatarUrl: String
     
     
-    static func logFromJson(json: Data)-> User? {
-    
-        JSONDecoder().keyDecodingStrategy = .convertFromSnakeCase
+    static func logFromJson(_ jsonData: Data)-> User? {
         
-        guard let result = try? JSONDecoder().decode(User.self, from: json) else { return nil}
+        let decoder = JSONDecoder()
         
+       decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        guard let result = try? decoder.decode(User.self, from: jsonData) else { return nil}
+        
+        print(result)
         return result
     }
     
