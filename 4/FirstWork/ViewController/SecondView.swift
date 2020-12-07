@@ -10,21 +10,36 @@ import Kingfisher
 
 class SecondView: UIViewController {
     
+   
+    
     @IBOutlet weak var helloLabel: UILabel!
-    @IBOutlet weak var uiImage: UIImageView!
+    
+    @IBOutlet weak var avatarUser: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var languageTextField: UITextField!
     @IBOutlet weak var uiSegment: UISegmentedControl!
     @IBOutlet weak var startButton: UIButton!
     
+    
+    
+    var user: User!
+    
     let sort = "1&sort=stars&order=desc"
     var response = "https://api.github.com/search/repositories?q="
     
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        uiImage.layer.cornerRadius = 60
-        uiImage.clipsToBounds = true
+        avatarUser.layer.cornerRadius = 60
+        avatarUser.clipsToBounds = true
+        
+        helloLabel.text = "Hello,\(user.login)!"
+        
+        let pictures = URL(string: user.avatarUrl)
+        avatarUser.kf.indicatorType = .activity
+        avatarUser.kf.setImage(with: pictures)
+
+
         
     }
     
@@ -56,4 +71,6 @@ class SecondView: UIViewController {
         }
         
     }
+    
+    
 }
