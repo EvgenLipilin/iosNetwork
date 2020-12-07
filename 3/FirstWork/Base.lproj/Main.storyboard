@@ -212,6 +212,49 @@
             </objects>
             <point key="canvasLocation" x="915.94202898550736" y="77.678571428571431"/>
         </scene>
+        <!--Search View-->
+        <scene sceneID="Oyz-Lu-KYv">
+            <objects>
+                <viewController storyboardIdentifier="ViewThree" id="Zys-rc-NGx" customClass="SearchView" customModule="FirstWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHi-eL-VE2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGF-Bi-yeb">
+                                <rect key="frame" x="5" y="82" width="296" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="2v4-8T-Ago"/>
+                                    <constraint firstAttribute="width" constant="296" id="sjs-Ml-Ftw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oVG-6Z-voc">
+                                <rect key="frame" x="0.0" y="131" width="414" height="765"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3fb-EY-nDZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kGF-Bi-yeb" firstAttribute="top" secondItem="3fb-EY-nDZ" secondAttribute="top" constant="38" id="3NC-gD-BVg"/>
+                            <constraint firstItem="oVG-6Z-voc" firstAttribute="leading" secondItem="3fb-EY-nDZ" secondAttribute="leading" id="7Hy-2O-qRa"/>
+                            <constraint firstItem="oVG-6Z-voc" firstAttribute="top" secondItem="kGF-Bi-yeb" secondAttribute="bottom" constant="20" id="BTR-T3-uNB"/>
+                            <constraint firstItem="oVG-6Z-voc" firstAttribute="trailing" secondItem="3fb-EY-nDZ" secondAttribute="trailing" id="Ikz-hZ-dDK"/>
+                            <constraint firstItem="oVG-6Z-voc" firstAttribute="top" secondItem="kGF-Bi-yeb" secondAttribute="bottom" constant="20" id="MoP-Fh-f6B"/>
+                            <constraint firstAttribute="bottom" secondItem="oVG-6Z-voc" secondAttribute="bottom" id="fXn-Kq-206"/>
+                            <constraint firstItem="kGF-Bi-yeb" firstAttribute="leading" secondItem="3fb-EY-nDZ" secondAttribute="leading" constant="5" id="jwc-UO-6w4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countRepo" destination="kGF-Bi-yeb" id="cyY-8s-fkH"/>
+                        <outlet property="tableView" destination="oVG-6Z-voc" id="Wav-Qv-9ab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFd-xb-eWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="77.678571428571431"/>
+        </scene>
     </scenes>
     <resources>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
