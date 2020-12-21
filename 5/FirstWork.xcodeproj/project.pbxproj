@@ -22,6 +22,7 @@
 		CF82CB0C257D10DD001847AE /* UserLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82CB0B257D10DD001847AE /* UserLog.swift */; };
 		CF90713C256105E000019C3C /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90713B256105E000019C3C /* SecondView.swift */; };
 		CFAC14C725912117008EDA75 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC14C625912117008EDA75 /* Authentication.swift */; };
+		CFAC14CC25912531008EDA75 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC14CB25912531008EDA75 /* Keychain.swift */; };
 		CFE6AA66257BA9C300DFD677 /* VkWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6AA65257BA9C300DFD677 /* VkWebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		CF82CB0B257D10DD001847AE /* UserLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLog.swift; sourceTree = "<group>"; };
 		CF90713B256105E000019C3C /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		CFAC14C625912117008EDA75 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		CFAC14CB25912531008EDA75 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		CFE6AA65257BA9C300DFD677 /* VkWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 		CFAC14C42591208C008EDA75 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
+				CFAC14CB25912531008EDA75 /* Keychain.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				CF90713C256105E000019C3C /* SecondView.swift in Sources */,
 				CF82CB0C257D10DD001847AE /* UserLog.swift in Sources */,
 				CF3C0F212545B11300056C8D /* AppDelegate.swift in Sources */,
+				CFAC14CC25912531008EDA75 /* Keychain.swift in Sources */,
 				CF6E589B25751E2800BBAD42 /* NetworkManager.swift in Sources */,
 				CF3C0F232545B11300056C8D /* SceneDelegate.swift in Sources */,
 				CF455C4A25740ECD00B6ED40 /* Repository.swift in Sources */,
